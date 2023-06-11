@@ -12,6 +12,49 @@
   </body>
 
     <script>
+      const person = {
+        name: {
+          first: "Bob",
+          last: "Smith",
+        },
+        age: 32,
+        bio: function () {
+          console.log(`${this.name.first} ${this.name.last} is ${this.age} years old.`);
+        },
+        introduceSelf: function () {
+          console.log(`Hi! I'm ${this.name.first}.`);
+        },
+      };
+      const myDataName = "height";
+      const myDataValue = "1.75m";
+      person[myDataName] = myDataValue;
+
+      function Person(name) {
+        this.name = name;
+        this.introduceSelf = function () {
+        console.log(`Hi! I'm ${this.name}.`);
+        };
+      };
+
+      const salva = new Person("Salva");
+      salva.name;
+      salva.introduceSelf();
+      // "Hi! I'm Salva."
+
+      function Cat(name, breed, color) {
+  this.name = name;
+  this.breed = breed;
+  this.color = color;
+  this.greeting = function () {
+    console.log(`Hello, said ${this.name} the ${this.breed}`);
+ }
+
+const cat = new Cat("Bertie", "Cymric", "white");
+
+const cat2 = new Cat("Elfie", "Aphrodite Giant", "ginger");
+
+
+cat.greeting();
 
     </script>
-</html>
+</html> "
